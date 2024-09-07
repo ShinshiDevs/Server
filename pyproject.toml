@@ -1,0 +1,17 @@
+[project]
+name = "server"
+version = "1.0.2024.0"
+description = "Server – service Discord bot for Shinshi Hub."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aurum-hikari",
+    "hikari>=2.0.0",
+    "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+speedups = ["uvloop>=0.18.0", "hikari[speedups]>=2.0.0"]
+
+[tool.uv.sources]
+aurum-hikari = { git = "https://github.com/ShinshiDevs/aurum-hikari", rev = "feature/17-message-components" }
